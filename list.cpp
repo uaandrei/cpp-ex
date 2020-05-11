@@ -38,15 +38,10 @@ public:
         count++;
     }
 
-    bool hasNextValue()
+    bool moveNext()
     {
-        if (currentNode == NULL)
-            return false;
-        else
-        {
-            currentNode = currentNode->nextNode;
-            return currentNode == NULL ? false : true;
-        }
+        currentNode = currentNode->nextNode;
+        return currentNode != NULL;
     }
 
     T getCurrentValue()
@@ -58,7 +53,6 @@ public:
 int main()
 {
     List<int> *list = new List<int>();
-    list->getCurrentValue();
     list->addValue(3);
     list->addValue(5);
     list->addValue(7);
@@ -66,5 +60,7 @@ int main()
     do
     {
         cout << list->getCurrentValue();
-    } while (list->nextValue());
+    } while (list->moveNext());
+
+    cout << "\n";
 }
