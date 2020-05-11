@@ -43,6 +43,18 @@
             "options": {
                 "cwd": "C:\\MinGW\\bin"
             }
+        },
+        {
+            "type": "shell",
+            "label": "cl.exe build active file",
+            "command": "cl.exe",
+            "args": [
+                "/Zi",
+                "/EHsc",
+                "/Fe:",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "${file}"
+            ]
         }
     ]
 }

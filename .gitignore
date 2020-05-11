@@ -31,3 +31,6 @@
 *.out
 *.app
 /bin
+vc140.pdb
+list.pdb
+list.ilk
